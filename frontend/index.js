@@ -15,3 +15,14 @@ document.addEventListener("keydown", function(e){
         jump()
     }
 })
+
+const checkDead = setInterval(function() {
+    const playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
+    const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+
+    if(blockLeft < 100 && blockLeft > 50 && playerTop >= 350){
+        block.style.animation = "none";
+        block.style.display = "none";
+        alert("you lose!");
+    }
+}, 10);
