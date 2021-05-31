@@ -11,20 +11,20 @@
 
 #player{
     background: url(images/naruto.gif) no-repeat center bottom/cover;
-    height: 200px;
-    width: 150px;
+    height: 175px;
+    width: 200px;
     position: relative;
-    top: 570px;
+    top: 600px;
     right: -100px;
 }
 .animate{
     animation: jump 500ms;
 }
 @keyframes jump{
-    0%{top: 570px;}
+    0%{top: 600px;}
     30%{top: 475px;}
     70%{top: 475px;}
-    100%{top: 570px;}
+    100%{top: 600px;}
 }
 
 #block{
