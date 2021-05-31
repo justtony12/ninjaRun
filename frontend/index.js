@@ -23,6 +23,7 @@ const checkDead = setInterval(function() {
     if(blockLeft < 150 && blockLeft > 75 && playerTop >= 500){
         shuriken.style.animation = "none";
         shuriken.style.display = "none";
+        clearInterval(timer);
         alert("you lose!");
     }
 }, 10);
@@ -33,7 +34,7 @@ let totalSeconds = 0;
 function gameClock(){
     ++totalSeconds;
     const hour = Math.floor(totalSeconds / 3600);
-    const minute = Math.floor((totalSeconds - hour*3600)/30);
+    const minute = Math.floor((totalSeconds - hour*3600)/60);
     const seconds = totalSeconds - (hour*3600 + minute*60);
 
     document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
