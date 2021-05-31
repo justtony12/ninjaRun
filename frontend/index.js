@@ -1,5 +1,6 @@
 const naruto = document.getElementById("naruto");
 const shuriken = document.getElementById("shuriken");
+const game = document.getElementById("game");
 
 function jump(){
     if(naruto.classList != "animate"){
@@ -24,7 +25,7 @@ const checkDead = setInterval(function() {
         shuriken.style.animation = "none";
         shuriken.style.display = "none";
         clearInterval(timer);
-        alert("you lose!");
+        gameOver();
     }
 }, 10);
 
@@ -38,4 +39,26 @@ function gameClock(){
     const seconds = totalSeconds - (hour*3600 + minute*60);
 
     document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
+}
+
+
+
+
+function startGame() {
+    let startDiv = document.getElementById("start");
+    let gameOver = document.getElementById("game-over");
+    startDiv.style.display = "none";
+    gameOver.style.display = "none";
+    start();
+}
+
+function gameOver() {
+    let startDiv = document.getElementById("start");
+    let gameOver = document.getElementById("game-over");
+    startDiv.style.display = "none";
+    gameOver.style.display = "block";
+
+    game.reset();
+    naruto.reset();
+    shuriken.reset();
 }
