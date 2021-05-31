@@ -12,7 +12,8 @@ function jump(){
 
 document.addEventListener("keydown", function(e){
     if (e.code === "Space") {
-        jump()
+        jump();
+        jumpSound();
     }
 })
 
@@ -22,10 +23,9 @@ const checkDead = setInterval(function() {
 
     if(blockLeft < 150 && blockLeft > 75 && playerTop >= 500){
         shuriken.style.animation = "none";
-        // shuriken.style.display = "none";
         clearInterval(timer);
         gameOver();
-        pause();
+        pauseMusic();
     }
 }, 10);
 
@@ -33,7 +33,7 @@ const timer = setInterval(gameClock, 1000);
 let totalSeconds = 0;
 
 function gameClock(){
-    play();
+    playMusic();
     ++totalSeconds;
     const hour = Math.floor(totalSeconds / 3600);
     const minute = Math.floor((totalSeconds - hour*3600)/60);
@@ -58,11 +58,16 @@ function gameOver() {
 }
 
 const myMusic = document.getElementById("music");
+const myJump = document.getElementById("jumpSound");
 
-function play(){
+function playMusic(){
     myMusic.play();
 }
 
-function pause(){
+function pauseMusic(){
     myMusic.pause();
+}
+
+function jumpSound(){
+    myJump.play();
 }
