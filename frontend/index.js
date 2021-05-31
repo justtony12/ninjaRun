@@ -43,18 +43,12 @@ function gameClock(){
     document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
 }
 
-function startGame() {
-    let startDiv = document.getElementById("start");
-    let gameOver = document.getElementById("game-over");
-    startDiv.style.display = "none";
-    gameOver.style.display = "none";
+function restartGame() {
     window.location.reload();
 }
 
 function gameOver() {
-    let startDiv = document.getElementById("start");
     let gameOver = document.getElementById("game-over");
-    startDiv.style.display = "none";
     gameOver.style.display = "block";
 }
 
