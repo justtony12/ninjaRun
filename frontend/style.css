@@ -4,7 +4,7 @@
 }
 
 #game{
-    background-color: white;
+    background-color: rgb(253, 253, 253);
     text-align: center;
     margin: 0 auto;
     overflow: hidden;
@@ -15,20 +15,20 @@
 
 #player{
     background: url(images/naruto.gif) no-repeat center bottom/cover;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     position: relative;
-    top: 415px;
+    top: 380px;
     right: -100px;
 }
 .animate{
     animation: jump 500ms;
 }
 @keyframes jump{
-    0%{top: 415px;}
-    30%{top: 315px;}
-    70%{top: 315px;}
-    100%{top: 415px;}
+    0%{top: 380px;}
+    30%{top: 300px;}
+    70%{top: 300px;}
+    100%{top: 380px;}
 }
 
 #block{
@@ -36,7 +36,7 @@
     height: 50px;
     background-color: red;
     position: relative;
-    top: 350px;
+    top: 300px;
     left: 1800px;
     animation: block 1.5s infinite linear;
 }

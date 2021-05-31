@@ -20,7 +20,7 @@ const checkDead = setInterval(function() {
     const playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
     const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
 
-    if(blockLeft < 100 && blockLeft > 50 && playerTop >= 350){
+    if(blockLeft < 150 && blockLeft > 75 && playerTop >= 375){
         block.style.animation = "none";
         block.style.display = "none";
         alert("you lose!");
