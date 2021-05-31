@@ -9,27 +9,26 @@
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    width: 1900px;
+    width: 1920px;
     height: 500px;
-    border: 5px solid black;
 }
 
 #player{
-    width: 50px;
+    background: url(images/naruto.gif) no-repeat center bottom/cover;
     height: 100px;
-    background-color: black;
+    width: 100px;
     position: relative;
-    top: 400px;
+    top: 415px;
     right: -100px;
 }
 .animate{
     animation: jump 500ms;
 }
 @keyframes jump{
-    0%{top: 400px;}
-    30%{top: 300px;}
-    70%{top: 300px;}
-    100%{top: 400px;}
+    0%{top: 415px;}
+    30%{top: 315px;}
+    70%{top: 315px;}
+    100%{top: 415px;}
 }
 
 #block{
@@ -44,4 +43,8 @@
 @keyframes block{
     0%{left: 1800px;}
     100%{left: -50px;}
+}
+
+#bg{
+    background-color: rgb(12, 97, 24);
 }
