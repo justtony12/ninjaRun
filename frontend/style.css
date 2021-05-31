@@ -4,39 +4,35 @@
 }
 
 #game{
-    background-color: rgb(253, 253, 253);
-    text-align: center;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    width: 1920px;
-    height: 500px;
+    background: url(images/forest.png) no-repeat center bottom/cover;
+    width: 2000px;
+    height: 800px;
 }
 
 #player{
     background: url(images/naruto.gif) no-repeat center bottom/cover;
-    height: 150px;
+    height: 200px;
     width: 150px;
     position: relative;
-    top: 380px;
+    top: 570px;
     right: -100px;
 }
 .animate{
     animation: jump 500ms;
 }
 @keyframes jump{
-    0%{top: 380px;}
-    30%{top: 300px;}
-    70%{top: 300px;}
-    100%{top: 380px;}
+    0%{top: 570px;}
+    30%{top: 475px;}
+    70%{top: 475px;}
+    100%{top: 570px;}
 }
 
 #block{
     background: url(images/shuriken.gif) no-repeat center bottom/cover;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     position: relative;
-    top: 300px;
+    top: 450px;
     left: 1800px;
     animation: block 1.5s infinite linear;
 }
@@ -46,5 +42,5 @@
 }
 
 #bg{
-    background-color: rgb(12, 97, 24);
+    background-color: rgb(49, 48, 45);
 }
