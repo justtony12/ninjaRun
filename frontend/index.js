@@ -1,5 +1,23 @@
 const naruto = document.getElementById("naruto");
 const shuriken = document.getElementById("shuriken");
+const time = Math.random();
+
+function setRandomAnimationDuration(){
+    shuriken.style.animationDuration = Math.floor(Math.random() * 5 + 1) + "s";
+}
+
+shuriken.addEventListener("animationiteration", setRandomAnimationDuration);
+
+// function setProperty(duration){
+//     shuriken.style.setProperty("--animation-time", duration + "s");
+// }
+
+// function changeAnimationTime(){
+//     const animationDuration = Math.random();
+//     setProperty(animationDuration)
+// }
+
+// setInterval(changeAnimationTime, 2000);
 
 function jump(){
     if(naruto.classList != "animate"){
