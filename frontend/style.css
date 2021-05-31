@@ -9,7 +9,7 @@
     height: 800px;
 }
 
-#player{
+#naruto{
     background: url(images/naruto.gif) no-repeat center bottom/cover;
     height: 175px;
     width: 200px;
@@ -27,7 +27,7 @@
     100%{top: 600px;}
 }
 
-#block{
+#shuriken{
     background: url(images/shuriken.gif) no-repeat center bottom/cover;
     width: 100px;
     height: 100px;

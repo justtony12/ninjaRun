@@ -1,12 +1,12 @@
-const player = document.getElementById("player");
-const block = document.getElementById("block");
+const naruto = document.getElementById("naruto");
+const shuriken = document.getElementById("shuriken");
 
 function jump(){
-    if(player.classList != "animate"){
-        player.classList.add("animate");
+    if(naruto.classList != "animate"){
+        naruto.classList.add("animate");
     }
     setTimeout(function(){
-        player.classList.remove("animate");
+        naruto.classList.remove("animate");
     }, 500);
 }
 
@@ -17,12 +17,12 @@ document.addEventListener("keydown", function(e){
 })
 
 const checkDead = setInterval(function() {
-    const playerTop = parseInt(window.getComputedStyle(player).getPropertyValue("top"));
-    const blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    const playerTop = parseInt(window.getComputedStyle(naruto).getPropertyValue("top"));
+    const blockLeft = parseInt(window.getComputedStyle(shuriken).getPropertyValue("left"));
 
     if(blockLeft < 150 && blockLeft > 75 && playerTop >= 500){
-        block.style.animation = "none";
-        block.style.display = "none";
+        shuriken.style.animation = "none";
+        shuriken.style.display = "none";
         alert("you lose!");
     }
 }, 10);
