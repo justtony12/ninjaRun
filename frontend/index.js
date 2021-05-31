@@ -26,3 +26,15 @@ const checkDead = setInterval(function() {
         alert("you lose!");
     }
 }, 10);
+
+const timer = setInterval(gameClock, 1000);
+let totalSeconds = 0;
+
+function gameClock(){
+    ++totalSeconds;
+    const hour = Math.floor(totalSeconds / 3600);
+    const minute = Math.floor((totalSeconds - hour*3600)/30);
+    const seconds = totalSeconds - (hour*3600 + minute*60);
+
+    document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
+}
