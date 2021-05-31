@@ -26,6 +26,7 @@ const checkDead = setInterval(function() {
         clearInterval(timer);
         gameOver();
         pauseMusic();
+        deathSound();
     }
 }, 10);
 
@@ -59,6 +60,7 @@ function gameOver() {
 
 const myMusic = document.getElementById("music");
 const myJump = document.getElementById("jumpSound");
+const myDeath = document.getElementById("deathMusic");
 
 function playMusic(){
     myMusic.play();
@@ -70,4 +72,8 @@ function pauseMusic(){
 
 function jumpSound(){
     myJump.play();
+}
+
+function deathSound(){
+    myDeath.play();
 }
