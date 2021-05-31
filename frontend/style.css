@@ -37,7 +37,7 @@
     animation: block var(--animation-time) infinite linear;
 }
 :root{
-    --animation-time: 2s;
+    --animation-time: 1.5s;
 }
 @keyframes block{
     0%{left: 1800px;}
