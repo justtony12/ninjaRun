@@ -43,4 +43,16 @@
 
 #bg{
     background-color: rgb(49, 48, 45);
+    height: 75vh;
+    width: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#timer{
+    position: relative;
+    top: 100px;
+    left: 800px;
 }
