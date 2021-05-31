@@ -23,7 +23,7 @@ const checkDead = setInterval(function() {
 
     if(blockLeft < 150 && blockLeft > 75 && playerTop >= 500){
         shuriken.style.animation = "none";
-        shuriken.style.display = "none";
+        // shuriken.style.display = "none";
         clearInterval(timer);
         gameOver();
     }
@@ -41,15 +41,12 @@ function gameClock(){
     document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
 }
 
-
-
-
 function startGame() {
     let startDiv = document.getElementById("start");
     let gameOver = document.getElementById("game-over");
     startDiv.style.display = "none";
     gameOver.style.display = "none";
-    start();
+    window.location.reload();
 }
 
 function gameOver() {
@@ -57,8 +54,4 @@ function gameOver() {
     let gameOver = document.getElementById("game-over");
     startDiv.style.display = "none";
     gameOver.style.display = "block";
-
-    game.reset();
-    naruto.reset();
-    shuriken.reset();
 }
