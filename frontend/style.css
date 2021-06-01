@@ -13,7 +13,7 @@
     width: 200px;
     position: relative;
     top: 600px;
-    right: -100px;
+    right: -300px;
 }
 .animate{
     animation: jump 500ms;

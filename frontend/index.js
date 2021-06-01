@@ -34,7 +34,7 @@ const checkDead = setInterval(function() {
     const playerTop = parseInt(window.getComputedStyle(naruto).getPropertyValue("top"));
     const blockLeft = parseInt(window.getComputedStyle(shuriken).getPropertyValue("left"));
 
-    if(blockLeft < 150 && blockLeft > 75 && playerTop >= 500){
+    if(blockLeft < 300 && blockLeft > 250 && playerTop >= 500){
         shuriken.classList.remove("attack");
         gameOver();
     }
@@ -43,6 +43,13 @@ const checkDead = setInterval(function() {
 
 const timer = {start: null}
 let totalSeconds = 0;
+
+function resetClock(){
+    if(totalSeconds > 0){
+        totalSeconds = 0;
+    }
+    timer.start = setInterval(gameClock, 1000);
+}
 
 function gameClock(){
     ++totalSeconds;
@@ -63,6 +70,7 @@ function restartGame() {
         gameOver.style.display = "none";
         startGame.style.display = "block";
     }
+    document.getElementById("timer").innerHTML = "0:0:0";
 }
 
 function gameOver() {
@@ -82,7 +90,7 @@ function startGame(){
     shuriken.classList.add("attack");
     stopMusic();
     playMusic();
-    timer.start = setInterval(gameClock, 1000);
+    resetClock();
 }
 
 const myMusic = document.getElementById("music");
