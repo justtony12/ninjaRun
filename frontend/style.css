@@ -67,8 +67,12 @@
 }
 
 #start-screen, #game-over {
+    border: solid black;
+    border-radius: 10px;
+    background-color: #0036e97a;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #941c1c;
+    font-size: 20px;
+    color: #b14700;
     padding: 20px;
     position: fixed;
     top:50%;
@@ -76,13 +80,13 @@
     margin-top: -100px;
     margin-left: -100px;
     height:200px;
-    width:250px;
+    width:375px;
     text-align: center;
 }
 
 #start-screen a, #game-over a {
-    border: 3px solid #881212;
-    color: #000000;
+    border: 3px solid #528600;
+    color: #528600;
     text-decoration: none;
     padding: 10px;
     border-radius: 15px;
@@ -90,8 +94,8 @@
     display: block;
     width: 200px;
     text-align: center;
-    font-size:3em;
+    font-size:2em;
     display: inline-block;
 }
 
-#start-screen a:hover, #game-over a:hover { background-color: #000000; color: #941c1c; }
+#start-screen a:hover, #game-over a:hover { background-color: #528600; color: black; }

@@ -2,7 +2,6 @@ const naruto = document.getElementById("naruto");
 const shuriken = document.getElementById("shuriken"); 
 const game = document.getElementById("game");
 
-//this is fine for now but shuriken still randomly appears along path.
 function setRandomAnimationDuration(){
     shuriken.style.animationDuration = Math.floor(Math.random() * 2 + 1.5) + "s";
 }
@@ -88,8 +87,6 @@ function playMusic(){
 function pauseMusic(){
     myMusic.pause();
 }
-
-//I probs need to make pause functions for the two below and intergrate them somewhere.
 
 function jumpSound(){
     myJump.play();
