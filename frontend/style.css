@@ -64,6 +64,27 @@
     left: 900px;
 }
 
+
+
+#welcome-screen{
+    background: url(images/welcome.gif) no-repeat center bottom/cover;
+
+    border: solid black;
+    border-radius: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+    position: fixed;
+    top:30%;
+    margin-top: -100px;
+    margin-left: -100px;
+    height:500px;
+    width:800px;
+    text-align: center;
+}
+#welcome-screen:hover {color: #b14700; }
+
 #start-screen, #game-over {
     border: solid black;
     border-radius: 10px;
