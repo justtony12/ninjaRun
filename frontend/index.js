@@ -54,7 +54,8 @@ function gameClock(){
 }
 
 function restartGame() {
-    window.location.reload();
+    pauseDeath();
+    blueBird.play();
 }
 
 function gameOver() {
@@ -72,6 +73,7 @@ function startGame(){
         startGame.style.display = "none";
     }
     shuriken.classList.add("attack");
+    stopMusic();
     playMusic();
     timer.start = setInterval(gameClock, 1000);
 }
@@ -82,7 +84,18 @@ const myDeath = document.getElementById("deathMusic");
 const blueBird = document.getElementById("blueBird");
 
 function startMusic(){
+    let startScreen = document.getElementById("game");
+    let welcomeScreen = document.getElementById("welcome-screen");
+    if(startScreen.style.display = "none"){
+        startScreen.style.display = "block";
+        welcomeScreen.style.display = "none";
+    }
     blueBird.play();
+}
+
+function stopMusic(){
+    blueBird.pause();
+    blueBird.currentTime = 0;
 }
 
 function playMusic(){
@@ -91,6 +104,7 @@ function playMusic(){
 
 function pauseMusic(){
     myMusic.pause();
+    myMusic.currentTime = 0;
 }
 
 function jumpSound(){
@@ -99,4 +113,9 @@ function jumpSound(){
 
 function playDeath(){
     myDeath.play();
+}
+
+function pauseDeath(){
+    myDeath.pause();
+    myMusic.currentTime = 0;
 }
