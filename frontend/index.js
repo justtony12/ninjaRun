@@ -54,7 +54,7 @@ function gameClock(){
 }
 
 function restartGame() {
-    window.location.reload(); //find a new way to reset the game without reloading the page.
+    window.location.reload();
 }
 
 function gameOver() {
@@ -79,6 +79,11 @@ function startGame(){
 const myMusic = document.getElementById("music");
 const myJump = document.getElementById("jumpSound");
 const myDeath = document.getElementById("deathMusic");
+const blueBird = document.getElementById("blueBird");
+
+function startMusic(){
+    blueBird.play();
+}
 
 function playMusic(){
     myMusic.play();
