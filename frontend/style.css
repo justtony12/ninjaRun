@@ -1,8 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-
 #game{
     background: url(images/forest.png) no-repeat center bottom/cover;
     width: 2000px;
@@ -27,6 +22,10 @@
     100%{top: 600px;}
 }
 
+
+
+
+
 #shuriken{
     background: url(images/shuriken.gif) no-repeat center bottom/cover;
     width: 100px;
@@ -34,6 +33,8 @@
     position: relative;
     top: 450px;
     left: 1800px;
+}
+.attack{
     animation: block var(--animation-time) infinite linear;
 }
 :root{
@@ -44,14 +45,16 @@
     100%{left: -75px;}
 }
 
+
+
+
+
 #bg{
     background-color: rgb(49, 48, 45);
-    height: 75vh;
-    width: 200vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 10;
 }
 
 #timer{
@@ -60,7 +63,7 @@
     left: 900px;
 }
 
-#game-over {
+#start-screen, #game-over {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #941c1c;
     padding: 20px;
@@ -74,7 +77,7 @@
     text-align: center;
 }
 
-#game-over a {
+#start-screen a, #game-over a {
     border: 3px solid #881212;
     color: #000000;
     text-decoration: none;

@@ -2,6 +2,7 @@ const naruto = document.getElementById("naruto");
 const shuriken = document.getElementById("shuriken");
 const time = Math.random();
 
+//this is fine for now but shuriken still randomly appears along path.
 function setRandomAnimationDuration(){
     shuriken.style.animationDuration = Math.floor(Math.random() * 2 + 1.5) + "s";
 }
@@ -33,7 +34,6 @@ const checkDead = setInterval(function() {
         clearInterval(timer);
         gameOver();
         pauseMusic();
-        deathSound();
     }
 }, 10);
 
@@ -41,7 +41,6 @@ const timer = setInterval(gameClock, 1000);
 let totalSeconds = 0;
 
 function gameClock(){
-    playMusic();
     ++totalSeconds;
     const hour = Math.floor(totalSeconds / 3600);
     const minute = Math.floor((totalSeconds - hour*3600)/60);
@@ -51,12 +50,22 @@ function gameClock(){
 }
 
 function restartGame() {
-    window.location.reload();
+    window.location.reload(); //find a new way to reset the game without reloading the page.
 }
 
 function gameOver() {
     let gameOver = document.getElementById("game-over");
     gameOver.style.display = "block";
+    deathSound();
+}
+
+function startGame(){
+    let startGame = document.getElementById("start-screen");
+    startGame.style.display = "none";
+    if(shuriken.classList != "attack"){
+        shuriken.classList.add("attack");
+    }
+    playMusic();
 }
 
 const myMusic = document.getElementById("music");
@@ -70,6 +79,8 @@ function playMusic(){
 function pauseMusic(){
     myMusic.pause();
 }
+
+//I probs need to make pause functions for the two below and intergrate them somewhere.
 
 function jumpSound(){
     myJump.play();
