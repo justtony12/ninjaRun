@@ -54,8 +54,15 @@ function gameClock(){
 }
 
 function restartGame() {
+    let gameOver = document.getElementById("game-over");
+    let startGame = document.getElementById("start-screen");
     pauseDeath();
     blueBird.play();
+    if(game.classList = "image"){
+        game.classList.remove("image");
+        gameOver.style.display = "none";
+        startGame.style.display = "block";
+    }
 }
 
 function gameOver() {
