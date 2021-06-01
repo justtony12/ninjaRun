@@ -8,17 +8,6 @@ function setRandomAnimationDuration(){
 
 shuriken.addEventListener("animationiteration", setRandomAnimationDuration);
 
-// function setProperty(duration){
-//     shuriken.style.setProperty("--animation-time", duration + "s");
-// }
-
-// function changeAnimationTime(){
-//     const animationDuration = Math.random();
-//     setProperty(animationDuration)
-// }
-
-// setInterval(changeAnimationTime, 2000);
-
 function jump(){
     if(naruto.classList != "animate"){
         naruto.classList.add("animate");
