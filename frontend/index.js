@@ -1,6 +1,5 @@
 const naruto = document.getElementById("naruto");
-const shuriken = document.getElementById("shuriken");
-const time = Math.random();
+const shuriken = document.getElementById("shuriken"); 
 
 //this is fine for now but shuriken still randomly appears along path.
 function setRandomAnimationDuration(){
@@ -31,13 +30,14 @@ const checkDead = setInterval(function() {
 
     if(blockLeft < 150 && blockLeft > 75 && playerTop >= 500){
         shuriken.style.animation = "none";
-        clearInterval(timer);
-        gameOver();
+        clearInterval(timer.action);
         pauseMusic();
+        gameOver();
     }
 }, 10);
 
-const timer = setInterval(gameClock, 1000);
+
+const timer = {action: null}
 let totalSeconds = 0;
 
 function gameClock(){
@@ -66,6 +66,7 @@ function startGame(){
         shuriken.classList.add("attack");
     }
     playMusic();
+    timer.action = setInterval(gameClock, 1000);
 }
 
 const myMusic = document.getElementById("music");
