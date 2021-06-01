@@ -37,11 +37,11 @@
     animation: block var(--animation-time) infinite linear;
 }
 :root{
-    --animation-time: 1.5s;
+    --animation-time: 2s;
 }
 @keyframes block{
     0%{left: 1800px;}
-    100%{left: -50px;}
+    100%{left: -75px;}
 }
 
 #bg{

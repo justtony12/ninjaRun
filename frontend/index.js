@@ -3,7 +3,7 @@ const shuriken = document.getElementById("shuriken");
 const time = Math.random();
 
 function setRandomAnimationDuration(){
-    shuriken.style.animationDuration = Math.floor(Math.random() * 5 + 1) + "s";
+    shuriken.style.animationDuration = Math.floor(Math.random() * 2 + 1.5) + "s";
 }
 
 shuriken.addEventListener("animationiteration", setRandomAnimationDuration);
