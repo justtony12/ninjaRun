@@ -30,14 +30,14 @@ const checkDead = setInterval(function() {
 
     if(blockLeft < 150 && blockLeft > 75 && playerTop >= 500){
         shuriken.style.animation = "none";
-        clearInterval(timer.action);
+        clearInterval(timer.start);
         pauseMusic();
         gameOver();
     }
 }, 10);
 
 
-const timer = {action: null}
+const timer = {start: null}
 let totalSeconds = 0;
 
 function gameClock(){
@@ -66,7 +66,7 @@ function startGame(){
         shuriken.classList.add("attack");
     }
     playMusic();
-    timer.action = setInterval(gameClock, 1000);
+    timer.start = setInterval(gameClock, 1000);
 }
 
 const myMusic = document.getElementById("music");
