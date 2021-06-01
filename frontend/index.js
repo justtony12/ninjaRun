@@ -29,9 +29,7 @@ const checkDead = setInterval(function() {
     const blockLeft = parseInt(window.getComputedStyle(shuriken).getPropertyValue("left"));
 
     if(blockLeft < 150 && blockLeft > 75 && playerTop >= 500){
-        shuriken.style.animation = "none";
-        clearInterval(timer.start);
-        pauseMusic();
+        shuriken.classList.remove("attack");
         gameOver();
     }
 }, 10);
@@ -56,15 +54,17 @@ function restartGame() {
 function gameOver() {
     let gameOver = document.getElementById("game-over");
     gameOver.style.display = "block";
-    deathSound();
+    clearInterval(timer.start);
+    pauseMusic();
+    playDeath();
 }
 
 function startGame(){
     let startGame = document.getElementById("start-screen");
-    startGame.style.display = "none";
-    if(shuriken.classList != "attack"){
-        shuriken.classList.add("attack");
+    if(startGame.style.display = "block"){
+        startGame.style.display = "none";
     }
+    shuriken.classList.add("attack");
     playMusic();
     timer.start = setInterval(gameClock, 1000);
 }
@@ -87,6 +87,6 @@ function jumpSound(){
     myJump.play();
 }
 
-function deathSound(){
+function playDeath(){
     myDeath.play();
 }
