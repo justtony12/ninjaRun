@@ -1,7 +1,10 @@
 #game{
-    background: url(images/forest.png) no-repeat center bottom/cover;
+    background: url(images/happyForest.gif) no-repeat center bottom/cover;
     width: 2000px;
-    height: 800px;
+    height: 850px;
+}
+.image{
+    filter: grayscale(100%);
 }
 
 #naruto{
@@ -50,7 +53,7 @@
 
 
 #bg{
-    background-color: rgb(49, 48, 45);
+    background-color: rgb(29, 29, 29);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,8 +90,8 @@
     display: block;
     width: 200px;
     text-align: center;
-    font-size:2em;
+    font-size:3em;
     display: inline-block;
 }
 
-#game-over a:hover { background-color: #000000; color: #922323; }
+#start-screen a:hover, #game-over a:hover { background-color: #000000; color: #941c1c; }
