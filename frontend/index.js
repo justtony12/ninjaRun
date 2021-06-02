@@ -134,3 +134,34 @@ function pauseDeath(){
     myDeath.pause();
     myMusic.currentTime = 0;
 }
+
+
+//Below this is my backend API stuff ... (needs ALOT of work)//
+
+
+const buttonDiv= document.getElementById("backend-button");
+const button = document.getElementById("button");
+const listDiv = document.getElementById("player-list");
+const list = document.getElementById("players");
+
+document.addEventListener("DOMContentLoaded", () => {
+    button.addEventListener("click", handleClick)
+})
+
+const handleClick = function(){
+    fetch('http://localhost:3000/players')
+    .then(resp => resp.json())
+    .then(json => renderPlayers(json))
+    .catch(err => console.log(err))
+}
+
+const renderPlayers = (json) => {
+    json.forEach(element => {
+        const li = document.createElement("li")
+        li.innerHTML = `
+        <h3 class="players-name">${element.name}</h3>
+        <h4 class="player-score">put scores here...</h4>
+        `
+        list.appendChild(li)
+    })
+}
