@@ -153,3 +153,8 @@ function pauseDeath(){
 
 // API stuff under this line ...
 
+document.addEventListener("DOMContentLoaded", () => {
+    ListApi.fetchLists()
+    PlayerApi.fetchPlayers()
+    playerForm().addEventListener("submit", PlayerApi.handleSubmit)
+})
