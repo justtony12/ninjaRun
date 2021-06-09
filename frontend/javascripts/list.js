@@ -1,6 +1,6 @@
 class List {
     static all= []
-    static dropDownOptions = []
+    // static dropDownOptions = []
 
     constructor({name, id, players = []}) {
         this.name = name
@@ -29,12 +29,12 @@ class List {
         return Player.all.filter(player => this.id === player.list_id)
     }
 
-    addToDropDown() {
-        const option = document.createElement("option")
-        option.value = this.id
-        option.innerText = this.name
-        playerSelectList().append(option)
-    }
+    // addToDropDown() {
+    //     const option = document.createElement("option")
+    //     option.value = this.id
+    //     option.innerText = this.name
+    //     playerSelectList().append(option)
+    // }
 
     render(){
         const h4 = document.createElement('h4')

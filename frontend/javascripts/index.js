@@ -91,7 +91,7 @@ function gameOver() {
     // pauseMusic();
     changeBackground();
     // playDeath();
-    // yourList();
+    yourList();
 }
 
 function startGame(){
@@ -219,6 +219,7 @@ function yourList(){
     `
     submittionForm.addEventListener("submit", PlayerApi.handleSubmit)
     document.getElementById("all-lists").append(submittionForm)
+
     // if(totalSeconds <= 2){
     //     if(noobList().style.display = "none"){
     //         noobList().style.display = "block"

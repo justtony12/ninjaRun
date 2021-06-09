@@ -37,12 +37,12 @@ class PlayerApi {
         .then(resp => resp.json())
         .then(json => {
             // let play = new Player(json)
-            noobList().reset()
-            wolfList().reset()
-            tigerList().reset()
-            demonList().reset()
-            dragonList().reset()
-            godList().reset()
+            // noobList().reset()
+            // wolfList().reset()
+            // tigerList().reset()
+            // demonList().reset()
+            // dragonList().reset()
+            // godList().reset()
             // play.render()
         })
     }
