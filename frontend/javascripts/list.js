@@ -5,7 +5,7 @@ class List {
     constructor({name, id, players = []}) {
         this.name = name
         this.id = id
-        this.players = players
+        // this.players = players
         List.all.push(this)
     }
 
@@ -32,7 +32,7 @@ class List {
     addToDropDown() {
         const option = document.createElement("option")
         option.value = this.id
-        option.value = this.name
+        option.innerText = this.name
         playerSelectList().append(option)
     }
 

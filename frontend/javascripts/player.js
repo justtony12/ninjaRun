@@ -18,4 +18,11 @@ class Player {
     static findOrCreateBy(playerObj) {
         return this.findByName(playerObj.name) || new Player(playerObj)
     }
+
+    update({name, score}) {
+        let play = Player.findById(this.id)
+        play.name = name
+        play.score = score
+        return play
+    }
 }

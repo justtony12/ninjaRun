@@ -7,6 +7,16 @@ class PlayerApi {
         .then(json => json.forEach(playerObj => {
             Player.findOrCreateBy(playerObj)
         }))
+        .catch(this.handleError)
+    }
+
+    static handleError(error) {
+        flash().innerText = error
+        flash().classList.remove("hide")
+        setTimeout(() => {
+            flash().innerText = ""
+            flash().classList.add("hide")
+        }, 5000)
     }
 
     static handleSubmit(e) {
@@ -25,8 +35,9 @@ class PlayerApi {
         })
         .then(resp => resp.json())
         .then(json => {
-            new Player(json)
+            let play = new Player(json)
             playerForm().reset()
+            // play.render()
         })
     }
 }
