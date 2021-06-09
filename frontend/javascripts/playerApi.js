@@ -21,10 +21,11 @@ class PlayerApi {
 
     static handleSubmit(e) {
         e.preventDefault()
+        debugger
         const data = {
-            name: playerName().value,
-            score: playerScore().value,
-            list_id: playerSelectList().value
+            name: e.target.querySelector("#player-name").value,
+            score: e.target.querySelector("#player-score").value,
+            list_id: e.target.querySelector("#list_id").value
         }
         fetch(PlayerApi.baseUrl, {
             method: 'POST',
