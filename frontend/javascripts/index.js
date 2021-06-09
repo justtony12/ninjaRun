@@ -158,3 +158,8 @@ document.addEventListener("DOMContentLoaded", () => {
     PlayerApi.fetchPlayers()
     playerForm().addEventListener("submit", PlayerApi.handleSubmit)
 })
+
+const playerForm = () => document.getElementById("player-form")
+const playerName = () => document.getElementById("player-name")
+const playerScore = () => document.getElementById("player-score")
+const playerSelectList = () => document.getElementById("list_id")

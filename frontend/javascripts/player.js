@@ -18,14 +18,4 @@ class Player {
     static findOrCreateBy(playerObj) {
         return this.findByName(playerObj.name) || new Player(playerObj)
     }
-
-    render(){
-        let playerAnchor = document.querySelector(`#list-${this.list_id}`)
-        const li = document.createElement('li')
-        playerAnchor.dataset.playId = this.list_id
-        li.innerHTML = `
-        <strong class="player-name">${this.name}</strong>
-        <span class="player-score">${this.score}</span>
-        `
-    }
 }

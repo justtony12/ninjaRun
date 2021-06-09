@@ -13,7 +13,8 @@ class PlayerApi {
         e.preventDefault()
         const data = {
             name: playerName().value,
-            score: playerScore().value
+            score: playerScore().value,
+            list_id: playerSelectList().value
         }
         fetch(PlayerApi.baseUrl, {
             method: 'POST',
@@ -24,9 +25,8 @@ class PlayerApi {
         })
         .then(resp => resp.json())
         .then(json => {
-            let player = new Player(json)
+            new Player(json)
             playerForm().reset()
-            player.render()
         })
     }
 }

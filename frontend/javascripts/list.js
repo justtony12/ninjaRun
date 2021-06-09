@@ -1,9 +1,11 @@
 class List {
     static all= []
-    
+    static dropDownOptions = []
+
     constructor({name, id, players = []}) {
         this.name = name
         this.id = id
+        this.players = players
         List.all.push(this)
     }
 
@@ -27,6 +29,13 @@ class List {
         return Player.all.filter(player => this.id === player.list_id)
     }
 
+    addToDropDown() {
+        const option = document.createElement("option")
+        option.value = this.id
+        option.value = this.name
+        playerSelectList().append(option)
+    }
+
     render(){
         const h4 = document.createElement('h4')
         const a = document.createElement('a')
@@ -35,7 +44,6 @@ class List {
         a.href = '#'
         a.addEventListener('click', this.renderPlayers)
         h4.appendChild(a)
-        listSection().appendChild(h4)
     }
 
     renderPlayers = (e) => {

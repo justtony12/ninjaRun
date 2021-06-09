@@ -18,12 +18,16 @@
     <div id="game" style="display:none;">
 
         <div>
-            <form id='player-form' style="display: none;">
+            <form id='player-form' style="display: block;">
                 <h3>Input your name:</h3>
                 <label for="player-name">Name:</label>
                 <input type="text" name="name" id="player-name"><br>
                 <label for="player-score">Your Score:</label>
                 <input type="text" name="score" id="player-score"><br>
+                <label for="player-list">Your List:</label>
+                <input type="text" name="list" id="player-list"><br>
+                <label for="player-list">List:</label>
+                <select id="list_id"></select>
                 <input type="submit" value="Create">
             </form>
         </div>
@@ -57,5 +61,7 @@
     <script src="javascripts/index.js"></script>
     <script src="javascripts/listApi.js"></script>
     <script src="javascripts/playerApi.js"></script>
+    <script src="javascripts/player.js"></script>
+    <script src="javascripts/list.js"></script>
 </body>
 </html>
