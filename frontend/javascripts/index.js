@@ -170,27 +170,27 @@ function yourList(){
     let listId;
 
     switch(true){
-        case(totalSeconds < 2):
+        case(totalSeconds < 60):
             level = "noob"
             listId = 1
             break
-        case(totalSeconds < 4):
+        case(totalSeconds < 300):
             level = "wolf"
             listId = 2
             break
-        case(totalSeconds < 6):
+        case(totalSeconds < 600):
             level = "tiger"
             listId = 3
             break
-        case(totalSeconds < 8):
+        case(totalSeconds < 1800):
             level = "demon"
             listId = 4
             break
-        case(totalSeconds < 10):
+        case(totalSeconds < 3600):
             level = "dragon"
             listId = 5
             break
-        case(totalSeconds >= 10):
+        case(totalSeconds >= 3600):
             level = "god"
             listId = 6
             break
