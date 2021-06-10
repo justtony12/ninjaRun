@@ -74,8 +74,8 @@ function gameClock(){
 function restartGame() {
     let gameOver = document.getElementById("game-over");
     let startGame = document.getElementById("start-screen");
-    // pauseDeath();
-    // blueBird.play();
+    pauseDeath();
+    blueBird.play();
     if(game.classList = "image"){
         game.classList.remove("image");
         gameOver.style.display = "none";
@@ -88,9 +88,9 @@ function gameOver() {
     let gameOver = document.getElementById("game-over");
     gameOver.style.display = "block";
     clearInterval(timer.start);
-    // pauseMusic();
+    pauseMusic();
     changeBackground();
-    // playDeath();
+    playDeath();
     yourList();
 }
 
@@ -100,8 +100,8 @@ function startGame(){
         startGame.style.display = "none";
     }
     shuriken.classList.add("attack");
-    // stopMusic();
-    // playMusic();
+    stopMusic();
+    playMusic();
     resetClock();
 }
 
@@ -121,7 +121,7 @@ function startMusic(){
         startScreen.style.display = "block";
         welcomeScreen.style.display = "none";
     }
-    // blueBird.play();
+    blueBird.play();
 }
 
 function stopMusic(){
@@ -148,7 +148,7 @@ function playDeath(){
 
 function pauseDeath(){
     myDeath.pause();
-    myMusic.currentTime = 0;
+    myDeath.currentTime = 0;
 }
 
 
@@ -157,102 +157,54 @@ function pauseDeath(){
 document.addEventListener("DOMContentLoaded", () => {
     ListApi.fetchLists()
     PlayerApi.fetchPlayers()
-    // noobList().addEventListener("submit", PlayerApi.handleSubmit)
-    // wolfList().addEventListener("submit", PlayerApi.handleSubmit)
-    // tigerList().addEventListener("submit", PlayerApi.handleSubmit)
-    // demonList().addEventListener("submit", PlayerApi.handleSubmit)
-    // dragonList().addEventListener("submit", PlayerApi.handleSubmit)
-    // godList().addEventListener("submit", PlayerApi.handleSubmit)
 })
-
-// const playerForm = () => document.getElementById("player-form")
-// const playerName = () => document.getElementById("player-name")
-// const playerScore = () => document.getElementById("player-score")
-// const playerSelectList = () => document.getElementById("list_id")
 
 const flash = () => document.querySelector("#flash")
 
-// const noobList = () => document.getElementById("noob-form");
-// const wolfList = () => document.getElementById("wolf-form");
-// const tigerList = () => document.getElementById("tiger-form");
-// const demonList = () => document.getElementById("demon-form");
-// const dragonList = () => document.getElementById("dragon-form");
-// const godList = () => document.getElementById("god-form");
-
-
 function yourList(){
-    const submittionForm = document.createElement("form");
+    const submissionForm = document.createElement("form");
 
-    submittionForm.id = "scoreForm"
-    const scoreMap = {
-        2:"noob",
-        3: "wolf",
-        4: "tiger",
-        5: "demon",
-        6: "dragon",
-    }
-    const listMap = {
-        "noob": 1,
-        "wolf": 2,
-        "tiger": 3,
-        "demon": 4,
-        "dragon": 5,
-        "god": 6
-    }
+    submissionForm.id = "scoreForm"
+    
+    let level;
+    let listId;
 
-    let level = scoreMap.totalSeconds
-    if(level === null){
-        Object.keys(scoreMap).forEach(function(key){
-            if(key > totalSeconds ){
-                level = scoreMap.key
-            }
-        })
-        level = "god"
+    switch(true){
+        case(totalSeconds < 2):
+            level = "noob"
+            listId = 1
+            break
+        case(totalSeconds < 4):
+            level = "wolf"
+            listId = 2
+            break
+        case(totalSeconds < 6):
+            level = "tiger"
+            listId = 3
+            break
+        case(totalSeconds < 8):
+            level = "demon"
+            listId = 4
+            break
+        case(totalSeconds < 10):
+            level = "dragon"
+            listId = 5
+            break
+        case(totalSeconds >= 10):
+            level = "god"
+            listId = 6
+            break
+            
     }
-    submittionForm.innerHTML = `
+   
+    submissionForm.innerHTML = `
         <h3>You're a ${level}</h3>
         <label for="player-name">Name:</label>
         <input type="text" name="name" id="player-name"><br>
         <input type="hidden" name="score" id="player-score" value="${totalSeconds}">
-        <input type="hidden" name="list" id="list_id" value="${listMap.level}">
+        <input type="hidden" name="list" id="list_id" value="${listId}">
         <input type="submit" value="Create">
     `
-    submittionForm.addEventListener("submit", PlayerApi.handleSubmit)
-    document.getElementById("all-lists").append(submittionForm)
-
-    // if(totalSeconds <= 2){
-    //     if(noobList().style.display = "none"){
-    //         noobList().style.display = "block"
-    //     }
-    // }
-
-    // if(totalSeconds > 2 && totalSeconds <= 3){
-    //     if(wolfList().style.display = "none"){
-    //         wolfList().style.display = "block"
-    //     }
-    // }
-
-    // if(totalSeconds > 3 && totalSeconds <= 4){
-    //     if(tigerList().style.display = "none"){
-    //         tigerList().style.display = "block"
-    //     }
-    // }
-
-    // if(totalSeconds > 4 && totalSeconds <= 5){
-    //     if(demonList().style.display = "none"){
-    //         demonList().style.display = "block"
-    //     }
-    // }
-
-    // if(totalSeconds > 5 && totalSeconds <= 6){
-    //     if(dragonList().style.display = "none"){
-    //         dragonList().style.display = "block"
-    //     }
-    // }
-
-    // if(totalSeconds > 6 && totalSeconds <= 7){
-    //     if(godList().style.display = "none"){
-    //         godList().style.display = "block"
-    //     }
-    // }
+    submissionForm.addEventListener("submit", PlayerApi.handleSubmit)
+    document.getElementById("all-lists").append(submissionForm)
 }

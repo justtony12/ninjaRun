@@ -1,3 +1,69 @@
+#welcome-screen{
+    background: url(images/welcome.gif) no-repeat center bottom/cover;
+
+    border: solid black;
+    border-radius: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+    position: fixed;
+    top:30%;
+    margin-top: -100px;
+    margin-left: -100px;
+    height:500px;
+    width:800px;
+    text-align: center;
+}
+#welcome-screen:hover {color: #b14700; }
+
+#start-screen, #game-over {
+    border: solid black;
+    border-radius: 10px;
+    background-color: #0036e97a;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #b14700;
+    padding: 20px;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    height:200px;
+    width:375px;
+    text-align: center;
+}
+
+#start-screen a, #game-over a {
+    border: 3px solid #528600;
+    color: #528600;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    text-align: center;
+    font-size:2em;
+    display: inline-block;
+}
+
+#start-screen a:hover, #game-over a:hover { background-color: #528600; color: black; }
+
+#all-lists{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #b14700;
+    padding: 20px;
+    position: fixed;
+    top:25%;
+    left:25%;
+    height:200px;
+    width:375px;
+    text-align: center;
+}
+
 #game{
     background: url(images/happyForest.gif) no-repeat center bottom/cover;
     width: 2000px;
@@ -63,58 +129,3 @@
     top: -150px;
     left: 900px;
 }
-
-
-
-#welcome-screen{
-    background: url(images/welcome.gif) no-repeat center bottom/cover;
-
-    border: solid black;
-    border-radius: 10px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    color: black;
-    padding: 20px;
-    position: fixed;
-    top:30%;
-    margin-top: -100px;
-    margin-left: -100px;
-    height:500px;
-    width:800px;
-    text-align: center;
-}
-#welcome-screen:hover {color: #b14700; }
-
-#start-screen, #game-over {
-    border: solid black;
-    border-radius: 10px;
-    background-color: #0036e97a;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    color: #b14700;
-    padding: 20px;
-    position: fixed;
-    top:50%;
-    left:50%;
-    margin-top: -100px;
-    margin-left: -100px;
-    height:200px;
-    width:375px;
-    text-align: center;
-}
-
-#start-screen a, #game-over a {
-    border: 3px solid #528600;
-    color: #528600;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 15px;
-    cursor: pointer;
-    display: block;
-    width: 200px;
-    text-align: center;
-    font-size:2em;
-    display: inline-block;
-}
-
-#start-screen a:hover, #game-over a:hover { background-color: #528600; color: black; }

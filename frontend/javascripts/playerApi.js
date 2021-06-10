@@ -21,7 +21,6 @@ class PlayerApi {
 
     static handleSubmit(e) {
         e.preventDefault()
-        debugger
         const data = {
             name: e.target.querySelector("#player-name").value,
             score: e.target.querySelector("#player-score").value,
@@ -36,14 +35,7 @@ class PlayerApi {
         })
         .then(resp => resp.json())
         .then(json => {
-            // let play = new Player(json)
-            // noobList().reset()
-            // wolfList().reset()
-            // tigerList().reset()
-            // demonList().reset()
-            // dragonList().reset()
-            // godList().reset()
-            // play.render()
+            document.getElementById("all-lists").innerHTML = ""
         })
     }
 }
