@@ -17,7 +17,7 @@
 }
 #welcome-screen:hover {color: #b14700; }
 
-#start-screen, #game-over {
+#start-screen {
     border: solid black;
     border-radius: 10px;
     background-color: #0036e97a;
@@ -35,7 +35,7 @@
     text-align: center;
 }
 
-#start-screen a, #game-over a {
+#start-screen a{
     border: 3px solid #528600;
     color: #528600;
     text-decoration: none;
@@ -49,16 +49,21 @@
     display: inline-block;
 }
 
-#start-screen a:hover, #game-over a:hover { background-color: #528600; color: black; }
+#start-screen a:hover { background-color: #528600; color: black; }
 
 #all-lists{
+    border: solid black;
+    border-radius: 10px;
+    background-color: #ad00007a;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    color: #b14700;
+    font-size: 30px;
+    color: #000000;
     padding: 20px;
     position: fixed;
-    top:25%;
-    left:25%;
+    top:50%;
+    left:50%;
+    margin-top: -100px;
+    margin-left: -100px;
     height:200px;
     width:375px;
     text-align: center;

@@ -72,21 +72,23 @@ function gameClock(){
 
 
 function restartGame() {
-    let gameOver = document.getElementById("game-over");
     let startGame = document.getElementById("start-screen");
+    let lists = document.getElementById("all-lists");
     pauseDeath();
     blueBird.play();
     if(game.classList = "image"){
         game.classList.remove("image");
-        gameOver.style.display = "none";
         startGame.style.display = "block";
+        lists.style.display = "none";
     }
     document.getElementById("timer").innerHTML = "0:0:0";
 }
 
 function gameOver() {
-    let gameOver = document.getElementById("game-over");
-    gameOver.style.display = "block";
+    let lists = document.getElementById("all-lists");
+    if(lists.style.display = "none") {
+        lists.style.display = "block"
+    }
     clearInterval(timer.start);
     pauseMusic();
     changeBackground();
@@ -203,7 +205,7 @@ function yourList(){
         <input type="text" name="name" id="player-name"><br>
         <input type="hidden" name="score" id="player-score" value="${totalSeconds}">
         <input type="hidden" name="list" id="list_id" value="${listId}">
-        <input type="submit" value="Create">
+        <input type="submit" value="Submit" onclick="restartGame()">
     `
     submissionForm.addEventListener("submit", PlayerApi.handleSubmit)
     document.getElementById("all-lists").append(submissionForm)
