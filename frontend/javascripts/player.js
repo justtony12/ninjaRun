@@ -25,4 +25,12 @@ class Player {
         play.score = score
         return play
     }
+
+    render() {
+        const li = document.createElement("li")
+        li.innerHTML = `
+            <strong class="player-name">${this.name}</strong>
+            <span class="player-score">${this.score}</span>
+        `
+    }
 }

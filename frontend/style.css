@@ -69,6 +69,20 @@
     text-align: center;
 }
 
+#list-section{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+    position: fixed;
+    top:30%;
+    margin-top: -250px;
+    margin-left: 1200px;
+    height:500px;
+    width:800px;
+    text-align: center;
+}
+
 #game{
     background: url(images/happyForest.gif) no-repeat center bottom/cover;
     width: 2000px;

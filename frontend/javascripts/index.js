@@ -210,3 +210,5 @@ function yourList(){
     submissionForm.addEventListener("submit", PlayerApi.handleSubmit)
     document.getElementById("all-lists").append(submissionForm)
 }
+
+const listSection = () => document.querySelector('#list-section');

@@ -1,11 +1,10 @@
 class List {
     static all= []
-    // static dropDownOptions = []
 
     constructor({name, id, players = []}) {
         this.name = name
         this.id = id
-        // this.players = players
+        this.players = players
         List.all.push(this)
     }
 
@@ -25,25 +24,22 @@ class List {
         return this.findByName(listObj.name) || new List(listObj)
     }
 
-    getPlayers() {
+    getPlayers(){
         return Player.all.filter(player => this.id === player.list_id)
     }
 
-    // addToDropDown() {
-    //     const option = document.createElement("option")
-    //     option.value = this.id
-    //     option.innerText = this.name
-    //     playerSelectList().append(option)
-    // }
-
-    render(){
-        const h4 = document.createElement('h4')
-        const a = document.createElement('a')
+    render() {
+        const h4 = document.createElement("h4")
+        const a = document.createElement("a")
         a.id = `list-${this.id}`
-        a.innerText = this.name
-        a.href = '#'
-        a.addEventListener('click', this.renderPlayers)
+        a.innerText = `
+            ${this.name}
+            ${this.players}
+        `
+        a.href ="#"
+        a.addEventListener("click", this.renderPlayers)
         h4.appendChild(a)
+        listSection().appendChild(h4)
     }
 
     renderPlayers = (e) => {
@@ -52,8 +48,7 @@ class List {
             const children = Array.from(e.target.parentNode.children)
             const lis = children.slice(1)
             lis.forEach((li) => li.remove())
-        }
-        else {
+        } else {
             this.getPlayers().forEach(element => element.render())
         }
     }
