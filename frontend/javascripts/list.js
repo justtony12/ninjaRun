@@ -4,7 +4,7 @@ class List {
     constructor({name, id, players = []}) {
         this.name = name
         this.id = id
-        this.players = players
+        // this.players = players
         List.all.push(this)
     }
 
@@ -21,7 +21,7 @@ class List {
     }
 
     static findOrCreateBy(listObj) {
-        return this.findByName(listObj.name) || new List(listObj)
+        return this.findByName(listObj.name && listObj.players) || new List(listObj)
     }
 
     getPlayers(){
@@ -32,11 +32,8 @@ class List {
         const h4 = document.createElement("h4")
         const a = document.createElement("a")
         a.id = `list-${this.id}`
-        a.innerText = `
-            ${this.name}
-            ${this.players}
-        `
-        a.href ="#"
+        a.innerText = this.name
+        // a.href ="#"
         a.addEventListener("click", this.renderPlayers)
         h4.appendChild(a)
         listSection().appendChild(h4)

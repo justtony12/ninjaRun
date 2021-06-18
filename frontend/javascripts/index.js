@@ -212,3 +212,14 @@ function yourList(){
 }
 
 const listSection = () => document.querySelector('#list-section');
+const playerSection = () => document.querySelector('#player-section');
+
+function toggleBoard() {
+    let listSection = document.querySelector('#list-section')
+
+    if (listSection.style.display === "none") {
+        listSection.style.display = "block";
+    } else {
+        listSection.style.display = "none";
+    }
+}

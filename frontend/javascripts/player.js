@@ -1,9 +1,11 @@
 class Player {
     static all = []
 
-    constructor({name, score}) {
+    constructor({name, score, list, id}) {
         this.name = name
         this.score = score
+        this.list_id = list.id
+        this.id = id
         Player.all.push(this)
     }
 
@@ -19,18 +21,14 @@ class Player {
         return this.findByName(playerObj.name) || new Player(playerObj)
     }
 
-    update({name, score}) {
-        let play = Player.findById(this.id)
-        play.name = name
-        play.score = score
-        return play
-    }
-
     render() {
-        const li = document.createElement("li")
+        let listAnchor = document.querySelector(`#list-${this.list_id}`)
+        const li = document.createElement('li')
+        listAnchor.dataset.listId = this.list_id
         li.innerHTML = `
-            <strong class="player-name">${this.name}</strong>
-            <span class="player-score">${this.score}</span>
+            <strong class="player-name">Name: ${this.name}</strong><br>
+            <span class="player-score">Time: ${this.score} second(s)</span>
         `
+        listAnchor.parentNode.appendChild(li)
     }
 }

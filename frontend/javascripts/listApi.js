@@ -1,6 +1,8 @@
 class ListApi {
+    static baseUrl = `http://localhost:3000/lists`
+
     static fetchLists() {
-        fetch('http://localhost:3000/lists')
+        fetch(this.baseUrl)
         .then(resp => resp.json())
         .then(json => json.forEach(listObj => {
             let list = List.findOrCreateBy(listObj)
