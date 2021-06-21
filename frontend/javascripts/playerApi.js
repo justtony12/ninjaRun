@@ -36,6 +36,7 @@ class PlayerApi {
         .then(resp => resp.json())
         .then(json => {
             let play = new Player(json)
+            // debugger
             document.getElementById("all-lists").innerHTML = ""
             play.render()
         })
