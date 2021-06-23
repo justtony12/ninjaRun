@@ -15,27 +15,27 @@ function yourList(){
 
     switch(true){
         case(totalSeconds < 60):
-            level = "noob"
+            level = "Noob"
             listId = 1
             break
         case(totalSeconds < 300):
-            level = "wolf"
+            level = "Wolf"
             listId = 2
             break
         case(totalSeconds < 600):
-            level = "tiger"
+            level = "Tiger"
             listId = 3
             break
         case(totalSeconds < 1800):
-            level = "demon"
+            level = "Demon"
             listId = 4
             break
         case(totalSeconds < 3600):
-            level = "dragon"
+            level = "Dragon"
             listId = 5
             break
         case(totalSeconds >= 3600):
-            level = "god"
+            level = "God"
             listId = 6
             break
             
@@ -54,7 +54,6 @@ function yourList(){
 }
 
 const listSection = () => document.querySelector('#list-section');
-const playerSection = () => document.querySelector('#player-section');
 
 function toggleBoard() {
     let listSection = document.querySelector('#list-section')
