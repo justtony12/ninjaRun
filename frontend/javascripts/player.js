@@ -24,7 +24,6 @@ class Player {
     render() {
         let listAnchor = document.querySelector(`#list-${this.list_id}`)
         const li = document.createElement('li')
-        // debugger
         listAnchor.dataset.listId = this.list_id
         li.innerHTML = `
             <strong class="player-name">Name: ${this.name}</strong><br>

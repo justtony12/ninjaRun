@@ -4,7 +4,6 @@ class List {
     constructor({name, id, players = []}) {
         this.name = name
         this.id = id
-        // this.players = players
         List.all.push(this)
     }
 
@@ -33,7 +32,6 @@ class List {
         const a = document.createElement("a")
         a.id = `list-${this.id}`
         a.innerText = this.name
-        // a.href ="#"
         a.addEventListener("click", this.renderPlayers)
         h4.appendChild(a)
         listSection().appendChild(h4)

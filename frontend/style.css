@@ -83,7 +83,6 @@
 #list-section{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-    color: black;
     background: rgba(66, 66, 66, 0.466);
     border: solid black;
     border-radius: 15px;
@@ -98,7 +97,7 @@
 }
 #list-section a:hover {color: green;}
 
-#list-section li {color: rgb(13, 13, 71);}
+#list-section li{color: seagreen;}
 
 #game{
     background: url(images/happyForest.gif) no-repeat center bottom/cover;
