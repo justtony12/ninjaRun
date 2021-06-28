@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     ListApi.fetchLists()
-    PlayerApi.fetchPlayers()
 })
 
 const flash = () => document.querySelector("#flash")

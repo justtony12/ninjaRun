@@ -1,7 +1,7 @@
 class List {
     static all= []
 
-    constructor({name, id, players = []}) {
+    constructor({name, id}) {
         this.name = name
         this.id = id
         List.all.push(this)
@@ -12,15 +12,15 @@ class List {
     }
 
     static findByName(name) {
-        return this.all.find(function(list) {list.name === name})
+        return this.all.find(list => list.name === name)
     }
 
     static findById(id) {
         return this.all.find(list => list.id === id)
     }
 
-    static findOrCreateBy(listObj) {
-        return this.findByName(listObj.name && listObj.players) || new List(listObj)
+    static createBy(listObj) {
+        return new List(listObj)
     }
 
     getPlayers(){
@@ -31,7 +31,9 @@ class List {
         const h4 = document.createElement("h4")
         const a = document.createElement("a")
         a.id = `list-${this.id}`
-        a.innerText = this.name
+        a.innerText = `
+            ${this.name}
+        `
         a.addEventListener("click", this.renderPlayers)
         h4.appendChild(a)
         listSection().appendChild(h4)
@@ -46,9 +48,5 @@ class List {
         } else {
             this.getPlayers().forEach(element => element.render())
         }
-    }
-
-    renderPlayers(list) {
-        return list
     }
 }

@@ -1,4 +1,6 @@
 class Player {
+    static currentPlayer = null
+
     static all = []
 
     constructor({name, score, list_id, id}) {
