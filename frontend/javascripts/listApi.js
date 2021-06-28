@@ -23,26 +23,4 @@ class ListApi {
             flash().classList.add("hide")
         }, 5000)
     }
-
-    // static handleSubmit(e) {
-    //     e.preventDefault()
-    //     const data = {
-    //         name: e.target.querySelector("#player-name").value,
-    //         score: e.target.querySelector("#player-score").value,
-    //         list_id: e.target.querySelector("#list_id").value
-    //     }
-    //     fetch(ListApi.baseUrl, {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(data)
-    //     })
-    //     .then(resp => resp.json())
-    //     .then(json => {
-    //         let play = new Player(json)
-    //         document.getElementById("all-lists").innerHTML = ""
-    //         play.render()
-    //     })
-    // }
 }

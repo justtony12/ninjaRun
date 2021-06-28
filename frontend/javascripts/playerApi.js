@@ -45,9 +45,7 @@ class PlayerApi {
     static createPlayer(e) {
         e.preventDefault()
         const data = {
-            name: e.target.querySelector("#player-name").value,
-            // score: e.target.querySelector("#player-score").value,
-            // list_id: e.target.querySelector("#list_id").value
+            name: e.target.querySelector("#player-name").value
         }
         fetch(PlayerApi.baseUrl, {
             method: 'POST',
@@ -59,8 +57,6 @@ class PlayerApi {
         .then(resp => resp.json())
         .then(json => {
             let play = new Player(json)
-            // document.getElementById("all-lists").innerHTML = ""
-            // play.render()
             Player.currentPlayer = play
         })
     }
