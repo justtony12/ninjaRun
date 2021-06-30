@@ -35,29 +35,29 @@ class PlayerApi {
         })
         .then(resp => resp.json())
         .then(json => {
-            let play = new Player(json) //this is not needed anymore
+            let play = new Player(json)
             document.getElementById("all-lists").innerHTML = ""
-            // Player.currentPlayer.render() "this is for my new variable"
+            // Player.currentPlayer.render()
             play.render()
         })
     }
 
-    static createPlayer(e) {
-        e.preventDefault()
-        const data = {
-            name: e.target.querySelector("#player-name").value
-        }
-        fetch(PlayerApi.baseUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(resp => resp.json())
-        .then(json => {
-            let play = new Player(json)
-            Player.currentPlayer = play
-        })
-    }
+    // static createPlayer(e) {
+    //     e.preventDefault()
+    //     const data = {
+    //         name: e.target.querySelector("#player-name").value
+    //     }
+    //     fetch(PlayerApi.baseUrl, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(data)
+    //     })
+    //     .then(resp => resp.json())
+    //     .then(json => {
+    //         let current = new Player(json)
+    //         Player.currentPlayer = current
+    //     })
+    // }
 }

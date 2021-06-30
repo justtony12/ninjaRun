@@ -63,3 +63,18 @@ function toggleBoard() {
         listSection.style.display = "none";
     }
 }
+
+// function playerName(){
+//     const playerForm = document.createElement("form");
+
+//     playerForm.id = "playerForm"
+   
+//     playerForm.innerHTML = `
+//         <label for="player-name">Name:</label>
+//         <input type="text" name="name" id="player-name"><br>
+
+//         <input type="submit" value="Submit">
+//     `
+//     playerForm.addEventListener("submit", PlayerApi.createPlayer)
+//     document.getElementById("player-info").append(playerForm)
+// }

@@ -11,6 +11,7 @@ function startMusic(){
         welcomeScreen.style.display = "none";
     }
     blueBird.play();
+    // playerName();
 }
 
 function stopMusic(){

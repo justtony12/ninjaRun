@@ -1,5 +1,5 @@
 class Player {
-    static currentPlayer = null
+    // static currentPlayer = null
 
     static all = []
 
