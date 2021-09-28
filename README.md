@@ -12,6 +12,8 @@ git clone git@github.com:justtony12/ninjaRun.git
 
 ## Usage
 
+[View Demo Here](https://youtu.be/WL62laLhXck)
+
 This is a simple endless runner game that is just for fun so enjoy!
 
 ## Contributing
