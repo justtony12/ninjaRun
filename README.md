@@ -30,6 +30,8 @@ This is a simple endless runner game that is just for fun, try to beat your high
 
 ![Score Board](/frontend/images/scoreBoard.PNG)
 
+!!! GOOD LUCK (Ξ｀ー´Ξ) (Ξ｀Д´)◎)))Rasengan！！！
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
