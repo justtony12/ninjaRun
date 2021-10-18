@@ -8,15 +8,27 @@ Ninja Runner is a simple Naruto themed "endless runner" made using JavaScript, C
 
 To install, click the "code" drop down button at the top right, click the SSH tab and copy the link. One you copy it paste in into your terminal.
 
-```bash
+```
 git clone git@github.com:justtony12/ninjaRun.git
 ```
+
+Once the repo is saved to your terminal, navigate to the 'ninjaBackendApi' file and activate the backend by running
+```
+bundle install
+```
+then
+```
+rails s
+```
+After you've activated your backedn API go into the frontend file and directly open the index.html file.
 
 ## Usage
 
 [View Demo Here](https://youtu.be/WL62laLhXck)
 
-This is a simple endless runner game that is just for fun so enjoy!
+This is a simple endless runner game that is just for fun, try to beat your high score and get into the God tier list.
+
+![Score Board](/frontend/images/scoreBoard.PNG)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
