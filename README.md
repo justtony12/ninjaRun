@@ -1,6 +1,6 @@
 # Ninja Runner
 
-![Main Page](/images/narutoMain.PNG)
+![Main Page](../images/narutoMain.PNG)
 
 Ninja Runner is a simple Naruto themed "endless runner" made using JavaScript, CSS and HTML in the frontend and RUBY API for the backend. Follow the link for the repo to the backend API. https://github.com/justtony12/ninjaBackendApi.git
 
